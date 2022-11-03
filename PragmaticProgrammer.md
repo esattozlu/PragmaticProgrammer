@@ -104,17 +104,75 @@ For accurate estimation;
 - Keep Track of Your Estimating Prowess 
 
 ## Chapter 3: The Basic Tools
-## Topic 16. The Power of Plain Text 
-## Topic 17. Shell Games
-## Topic 18. Power Editing
-## Topic 19. Version Control
-## Topic 20. Debugging
-## Topic 21. Text Manipulation
-## Topic 22. Engineering Daybooks
+
+### Topic 16. The Power of Plain Text 
+HTML, JSON, YAML,HTTP, SMTP, IMAP, and so on are all plain text.
+That’s for some good reasons:
+- Insurance against obsolescence 
+- Leverage existing tools
+- Easier testing
+
+### Topic 17. Shell Games
+You can launch applications, debuggers, browsers, editors, and utilities from the shell. You can search for files, query the status of the system, and filter the output. And by programming the shell, you can create complex macro commands for activities you do frequently.
+
+### Topic 18. Power Editing
+- Achieve Editor Fluency
+#### What does "Fluent" Mean?
+When editing text, move and make selections by character, word, line, and paragraph.
+When editing code, move by various syntactic units (matching delimiters, functions, modules, ...).
+Reindent code following changes.
+Comment and uncomment blocks of code with a single command.
+Undo and redo changes.
+Split the editor window into multiple panels, and navigate between them.
+Navigate to a particular line number. Sort selected lines.
+Search for both strings and regular expressions, and repeat previous searches.
+Display compilation errors in the current project. Run the current project’s tests.
+
+### Topic 19. Version Control
+Version control systems keep track of every change you make to your source code and documentation. With a properly configured source code control system, you can always revert to a previous version of your software.
+But a version control system does much more than roll back errors. 
+A good VCS will allow you to answer questions such as:
+- Who made the changes to this line of code?
+- What is the difference between the current version and last week's version?
+- How many lines of code have we changed in this version?
+- Which files are changed most often?
+Such information is invaluable for defect tracking, auditing, performance and quality purposes.
+
+### Topic 20. Debugging
+Fix the Problem, Not the Blame
+It doesn't matter if the bug is your fault or someone else's. It's is your problem.
+
+#### WHERE TO START
+- Before you start looking at the error, make sure you're working on cleanly generated code without warnings.
+- When trying to solve any problem, you need to collect all relevant data.
+
+#### DEBUGGING STRATEGIES
+- Reproducing Bugs
+The best way to start fixing a bug is to make it reproducible. If you can't reproduce the error, you won't know if it has been fixed.
+
+- Logging and/or Tracing
+You need to trace the state of a program or a data structure over time.
+
+- Rubber Ducking
+A very simple but particularly useful technique for finding the cause of a problem is to simply explain it to someone else.
+
+
+#### DEBUGGING CHECKLIST
+- Is the problem being reported a direct result of the underlying bug, or merely a symptom?
+- Is the bug really in the framework you’re using? Is it in the OS? Or is it in your code?
+- If you explained this problem in detail to a coworker, what would you say?
+- If the suspect code passes its unit tests, are the tests complete enough? What happens if you run the tests with this data?
+- Do the conditions that caused this bug exist anywhere else in the system? Are there other bugs still in the larval stage, just waiting to hatch?
+
+### Topic 21. Text Manipulation
+Learn a Text Manipulation Language
+
+### Topic 22. Engineering Daybooks
+Use a daybooks to take notes in meetings, jot down what we're working on, note down variable values while debugging, leave reminders, save ideas.
 
 ## Chapter 4: Pragmatic Paranoia
-## Topic 23. Design by Contract
-## Topic 24. Dead Programs Tell No Lies
-## Topic 25. Assertive Programming
-## Topic 26. How to Balance Resources
-## Topic 27. Don’t Outrun Your Headlights
+### Topic 23. Design by Contract
+### Topic 24. Dead Programs Tell No Lies
+### Topic 25. Assertive Programming
+### Topic 26. How to Balance Resources
+### Topic 27. Don’t Outrun Your Headlights
