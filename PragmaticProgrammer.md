@@ -72,13 +72,13 @@ Design your code modularly for reuse.
 
 ### Topic 10. Orthogonality
 BENEFITS OF ORTHOGONALITY 
-- Gain Productivity 
+##### Gain Productivity 
 It is easier to write relatively small, independent, orthogonal components than to write a single large block of code. Simple orthogonal components combine to increase productivity and efficiency.
-- Reduce Risk 
+##### Reduce Risk 
 Orthogonal approach reduces risks in software. If a module is broken, it is unlikely to affect the other module. The system is less fragile. Errors made do not spread to the entire system. It has high testability.
-- TOOLKITS AND LIBRARIES 
+##### TOOLKITS AND LIBRARIES 
 When using third-party applications, be careful not to disturb the orthogonality of the application.
-- TESTING 
+##### TESTING 
 An orthogonally designed and implemented system is easier to test. Because interactions between system components are limited, most of the system testing can be performed at the module level. Module-level (or unit) testing is much easier to specify and perform than integration testing.
 
 ### Topic 11. Reversibility
@@ -118,15 +118,15 @@ You can launch applications, debuggers, browsers, editors, and utilities from th
 ### Topic 18. Power Editing
 - Achieve Editor Fluency
 #### What does "Fluent" Mean?
-When editing text, move and make selections by character, word, line, and paragraph.
-When editing code, move by various syntactic units (matching delimiters, functions, modules, ...).
-Reindent code following changes.
-Comment and uncomment blocks of code with a single command.
-Undo and redo changes.
-Split the editor window into multiple panels, and navigate between them.
-Navigate to a particular line number. Sort selected lines.
-Search for both strings and regular expressions, and repeat previous searches.
-Display compilation errors in the current project. Run the current project’s tests.
+- When editing text, move and make selections by character, word, line, and paragraph.
+- When editing code, move by various syntactic units (matching delimiters, functions, modules, ...).
+- Reindent code following changes.
+- Comment and uncomment blocks of code with a single command.
+- Undo and redo changes.
+- Split the editor window into multiple panels, and navigate between them.
+- Navigate to a particular line number. Sort selected lines.
+- Search for both strings and regular expressions, and repeat previous searches.
+- Display compilation errors in the current project. Run the current project’s tests.
 
 ### Topic 19. Version Control
 Version control systems keep track of every change you make to your source code and documentation. With a properly configured source code control system, you can always revert to a previous version of your software.
@@ -147,13 +147,13 @@ It doesn't matter if the bug is your fault or someone else's. It's is your probl
 - When trying to solve any problem, you need to collect all relevant data.
 
 #### DEBUGGING STRATEGIES
-- Reproducing Bugs
+##### Reproducing Bugs
 The best way to start fixing a bug is to make it reproducible. If you can't reproduce the error, you won't know if it has been fixed.
 
-- Logging and/or Tracing
+##### Logging and/or Tracing
 You need to trace the state of a program or a data structure over time.
 
-- Rubber Ducking
+##### Rubber Ducking
 A very simple but particularly useful technique for finding the cause of a problem is to simply explain it to someone else.
 
 
@@ -171,8 +171,27 @@ Learn a Text Manipulation Language
 Use a daybooks to take notes in meetings, jot down what we're working on, note down variable values while debugging, leave reminders, save ideas.
 
 ## Chapter 4: Pragmatic Paranoia
+You Can’t Write Perfect Software
+
 ### Topic 23. Design by Contract
+Every function and method in a software system does something. Before starting something, the function may have an expectation and give a statement when it's done. These expectations are explained as follows:
+- Preconditions: What must be true in order for the routine to be called; the routine’s requirements.
+- Postconditions: What the routine is guaranteed to do; the state of the world when the routine is done.
+- Class invariants: A class ensures that this condition is always true from the perspective of a caller. 
+
+Here, the emphasis is on “lazy” code: be strict in what you will accept before you begin, and promise as little as possible in return.
+
 ### Topic 24. Dead Programs Tell No Lies
+All errors inform you. You can convince yourself that there is no mistake and choose to ignore it. Instead, Pragmatic Programmers tell themselves that if there is a mistake, it is something very, very bad. Don't forget to read the error messages.
+
 ### Topic 25. Assertive Programming
+Use Assertions to Prevent the Impossible
+If you think a situation will never happen, add assertion code to check this.
+
 ### Topic 26. How to Balance Resources
+Most of the time, resource usage follows a predictable pattern: you allocate the resource, use it, and then deallocate it.
+It doesn't matter what kind of resources we use (processes, network connections, memory, files, threads, windows). Whoever allocates a resource should be responsible for deallocating it.
+
 ### Topic 27. Don’t Outrun Your Headlights
+We can't see very far into the future, and the farther you look, the darker it gets. Pragmatic Programmers have a strict rule: "Take Small Steps—Always"
+Always take small steps, check feedback before continuing.
