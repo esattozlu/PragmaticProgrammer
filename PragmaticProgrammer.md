@@ -62,13 +62,46 @@ Before asking for an improvement, it is necessary to show the team that it can b
 
 ## Chapter 2: A Pragmatic Approach
 ## Topic 8. The Essence of Good Design 
+Considering that the code you write may change in the future, write decoupled, cohesive and changeable code.
+
 ## Topic 9. DRY—The Evils of Duplication 
+DRY – Don’t Repeat Yourself
+Repetition in coding is dangerous. If there are repetitive codes, when there is a change, it is necessary to apply the change wherever it is repeated. If it is forgotten that the code is repetitive, making changes only in one place will cause conflict in the code.
+Design your code modularly for reuse.
+
+
 ## Topic 10. Orthogonality
+BENEFITS OF ORTHOGONALITY 
+- Gain Productivity 
+It is easier to write relatively small, independent, orthogonal components than to write a single large block of code. Simple orthogonal components combine to increase productivity and efficiency.
+- Reduce Risk 
+Orthogonal approach reduces risks in software. If a module is broken, it is unlikely to affect the other module. The system is less fragile. Errors made do not spread to the entire system. It has high testability.
+- TOOLKITS AND LIBRARIES 
+When using third-party applications, be careful not to disturb the orthogonality of the application.
+- TESTING 
+An orthogonally designed and implemented system is easier to test. Because interactions between system components are limited, most of the system testing can be performed at the module level. Module-level (or unit) testing is much easier to specify and perform than integration testing.
+
 ## Topic 11. Reversibility
+Ensure both interchangeability and reversibility using a flexible architecture.
+
 ## Topic 12. Tracer Bullets
-## Topic 13. Prototypes and Post-it Notes 
+While writing the code, it is necessary to use tracer bullets to keep track of where the code goes, what results it provides, and the future of the code.
+
+## Topic 13. Prototypes and Post-it Notes
+It is important to use prototypes to analyze, uncover and reduce risk.
+ 
 ## Topic 14. Domain Languages 
+Choose a language suitable for the problem domain.
+
 ## Topic 15. Estimating
+It is important to be able to predict the feasibility, duration, and challenges of a project. Thus, no surprise problems are encountered during the development process.
+For accurate estimation;
+- Understand What’s Being Asked 
+- Build a Model of the System 
+- Break the Model into Components 
+- Give Each Parameter a Value 
+- Calculate the Answers 
+- Keep Track of Your Estimating Prowess 
 
 ## Chapter 3: The Basic Tools
 ## Topic 16. The Power of Plain Text 
