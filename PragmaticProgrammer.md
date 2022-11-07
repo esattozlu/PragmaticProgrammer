@@ -195,3 +195,74 @@ It doesn't matter what kind of resources we use (processes, network connections,
 ### Topic 27. Don’t Outrun Your Headlights
 We can't see very far into the future, and the farther you look, the darker it gets. Pragmatic Programmers have a strict rule: "Take Small Steps—Always"
 Always take small steps, check feedback before continuing.
+
+## Chapter 5: Bend, or Break
+### Topic 28. Decoupling
+A software that we will change or update later should be flexible and low in dependency.
+The simple principle we should follow is "Decoupled Code Is Easier to Change".
+####Symptoms of coupling:
+- Wacky dependencies between unrelated modules or libraries.
+- “Simple” changes to one module that propagate through unrelated modules in the system or break stuff elsewhere in the system.
+- Developers who are afraid to change code because they aren’t sure what might be affected.
+- Meetings where everyone has to attend because no one is sure who will be affected by a change.
+
+We need to avoid global data as much as possible to minimize dependency. Keep your code as shy as possible. Dealing only directly with its own issues will help keep the application decou pled and be more amenable to change.
+
+### Topic 29. Juggling the Real World
+If we write apps that respond to real-world events and adjust what they do to those events, those apps work better in the real world.
+Let’s look at four strategies that help.
+-  Finite State Machines
+-  The Observer Pattern
+-  Publish/Subscribe
+-  Reactive Programming and Streams
+
+### Topic 30. Transforming Programming 
+All programs transform data, converting an input into an output. We always need to think of programs as something that transforms inputs into outputs.
+The easiest way to find transformation is to start with the requirement and identify their inputs and outputs.
+#### WHAT ABOUT ERROR HANDLING?
+- First, Choose a Representation
+- Then Handle It Inside Each Transformation
+- Or Handle It in the Pipeline
+Thinking of code as a series of (nested) transformations can be a liberating approach to programming. This approach makes your code cleaner, shortens your functions, and flatters your designs.
+
+### Topic 31. Inheritance Tax
+Inheritance is coupling. Not only is the child class coupled to the parent, the parent’s parent, and so on, but the code that uses the child is also coupled to all the ancestors.
+Instead of inheritance, apply the following techniques;
+- Interfaces and protocols 
+- Delegation
+- Mixins and traits
+
+### Topic 32. Configuration
+####Parameterize Your App Using External Configuration
+Common things you will probably want to put in configuration data include:
+- Credentials for external services (database, third party APIs, and so on)
+- Logging levels and destinations
+- Port, IP address, machine, and cluster names the app uses 
+- Environment-specific validation parameters
+- Externally set parameters, such as tax rates
+- Site-specific formatting details
+- License keys
+
+## Chapter 6: Concurrency
+### Topic 33. Breaking Temporal Coupling 
+### Topic 34. Shared State Is Incorrect State 
+### Topic 35. Actors and Processes
+### Topic 36. Blackboards
+## Chapter 7: While You Are Coding
+### Topic 37. Listen to Your Lizard Brain 2. Topic 38. Programming by Coincidence 3. Topic 39. Algorithm Speed
+### Topic 40. Refactoring
+### Topic 41. Test to Code
+### Topic 42. Property-Based Testing
+### Topic 43. Stay Safe Out There
+### Topic 44. Naming Things
+## Chapter 8: Before the Project
+### Topic 45. The Requirements Pit
+### Topic 46. Solving Impossible Puzzles 
+### Topic 47. Working Together
+### Topic 48. The Essence of Agility
+## Chapter 9: Pragmatic Projects 
+### Topic 49. Pragmatic Teams
+### Topic 50. Coconuts Don’t Cut It 
+### Topic 51. Pragmatic Starter Kit 
+### Topic 52. Delight Your Users
+### Topic 53. Pride and Prejudice
