@@ -244,17 +244,96 @@ Common things you will probably want to put in configuration data include:
 - License keys
 
 ## Chapter 6: Concurrency
-### Topic 33. Breaking Temporal Coupling 
+Concurrency is when two or more pieces of code run as if they were running at the same time.
+Parallelism is when they do run at the same time.
+To ensure concurrency, you must run code in an environment that can switch execution between different parts of your code as you run.
+To have parallelism you need hardware that can do two things at the same time.
+
+### Topic 33. Breaking Temporal Coupling
+#### Analyze Workflow to Improve Concurrency
+We can use an activity diagram to understand what happens at the same time and what needs to happen in a precise order.
+Activity diagrams show potential areas of concurrency.
+#### PARALLELISM
+Concurrency is a software mechanism. Parallelism is a hardware issue. If we have multiple processors, local or remote, we can reduce the overall duration of the jobs if we can split the work between them.
+ 
 ### Topic 34. Shared State Is Incorrect State 
+Concurrency is difficult in a shared resource environment, and very difficult to manage yourself.
+
 ### Topic 35. Actors and Processes
+Actors execute concurrently, asynchronously, and share nothing. If you had enough physical processors, you could run an actor on each. If you have a single processor, then some runtime can handle the switching of context between them. Either way, the code running in the actors is the same.
+In the actor model, there is no need to write any code to handle concurrency as there is no shared state. Since the actors work for themselves according to the messages they receive, there is no need to code with the logic of "do this, do that".
+
 ### Topic 36. Blackboards
+#### Use Blackboards to Coordinate Workflow
+You can try to handle every possible combination and situation using a workflow system. Many such systems exist, but they can be complex. As regulations change, the workflow has to be reorganized: people may have to change their procedures and code may have to be rewritten.
+
 ## Chapter 7: While You Are Coding
-### Topic 37. Listen to Your Lizard Brain 2. Topic 38. Programming by Coincidence 3. Topic 39. Algorithm Speed
+### Topic 37. Listen to Your Lizard Brain
+As we gain experience, we need to understand and listen to the instinctive effects that occur and find out why.
+When you have a problem and can't find a solution, step away from the keyboard for a while. Don't force yourself to think about it. After a while, you will spontaneously come up with new ideas and solve the problem.
+If you are reluctant to start a new project, find an area within the project that interests you. Try things you've been curious about but haven't implemented before in the project. This will break your reluctance. 
+Do the following.
+- Write“I’m prototyping ”on a sticky note, and stick it on the side of your screen.
+- Remind yourself that prototypes are meant to fail. And remind yourself that prototypes get thrown away, even if they don’t fail. There is no downside to doing this.
+- In your empty editor buffer,create a comment describing in one sentence what you want to learn or do.
+- Start coding.
+
+### Topic 38. Programming by Coincidence 
+If you don't know why and how the code works, you won't be able to understand why it fails when it fails. That's why you should know why you wrote the code you wrote and what effects it will have.
+If you are working on a completed project, you need to understand the application, even if the application runs without errors. In fact, the application appears to be working, but only in a limited area. It is necessary to deal with a running application due to the following situations.
+
+- It may not really be working—it might just look like it is.
+- The boundary condition you rely on may be just an accident. In different circumstances (a different screen resolution, more CPU cores), it might behave differently.
+- Undocumented behavior may change with the next release of the library.
+- Additional and unnecessary calls make your code slower.
+- Additional calls increase the risk of introducing new bugs of their own.
+
+### Topic 39. Algorithm Speed
+#### BIG-O NOTATION
+When we write anything that includes loops or recursive calls, we check the runtime and memory requirements. This is quick confirmation that what we're doing makes sense under the circumstances. But sometimes we find ourselves doing a more detailed analysis. That's when Big-O notation comes in handy.
+Big-O is never going to give you actual numbers for time or memory or whatever: it simply tells you how these values will change as the input changes.
+
 ### Topic 40. Refactoring
+As a program evolves, it will become necessary to rethink earlier decisions and rework portions of the code.
+#### WHEN SHOULD YOU REFACTOR?
+You refactor when you learn something better or realize you can do better.
+If you've come across a stumbling block because the code doesn't quite fit anymore, or anything else at all strikes you as being “wrong,” don't hesitate to change it.
+Refactor your code when you find out that:
+- Duplication
+- Nonorthogonal design
+- Outdated knowledge
+- Usage
+- Performance
+- The Tests Pass
+
 ### Topic 41. Test to Code
+#### Testing Is Not About Finding Bugs
+A Test Is the First User of Your Code
+#### Test-Driven Development
+
+- Decide on a small piece of functionality you want to add.
+- Write a test that will pass once that functionality is implemented.
+- Run all tests. Verify that the only failure is the one you just wrote.
+- Write the smallest amount of code needed to get the test to pass, and verify that the tests now run cleanly.
+- Refactor your code: see if there is a way to improve on what you just wrote (the test or the function). Make sure the tests still pass when you’re done.
+
 ### Topic 42. Property-Based Testing
+Use Property-Based Tests to Validate Your Assumptions
+We recommend writing unit tests for your functions. You do this by thinking about typical things that might be a problem, based on your knowledge of what you're testing.
+That unit test does two things for you. First, it lets you focus in on the problem without all the additional calls being made into your code by the property-based testing framework. Second, that unit test acts as a regression test. Because property-based tests generate random values that get passed to your test, there’s no guarantee that the same values will be used the next time you run tests. Having a unit test that forces those values to be used ensures that this bug won’t slip through.
+
 ### Topic 43. Stay Safe Out There
+Basic principles that you should always bear in mind:
+- Minimize Attack Surface Area 
+- Principle of Least Privilege
+- Secure Defaults
+- Encrypt Sensitive Data
+- Maintain Security Updates
+
 ### Topic 44. Naming Things
+We create names for applications, subsystems, modules, functions, variables—we’re constantly creating new things and bestowing names on them. And those names are very, very important, because they reveal a lot about your intent and belief.
+When naming things, you’re constantly looking for ways of clarifying what you mean, and that act of clarification will lead you to a better understanding of your code as you write it.
+
 ## Chapter 8: Before the Project
 ### Topic 45. The Requirements Pit
 ### Topic 46. Solving Impossible Puzzles 
