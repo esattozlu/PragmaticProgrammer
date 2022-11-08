@@ -318,8 +318,8 @@ A Test Is the First User of Your Code
 - Refactor your code: see if there is a way to improve on what you just wrote (the test or the function). Make sure the tests still pass when you’re done.
 
 ### Topic 42. Property-Based Testing
-Use Property-Based Tests to Validate Your Assumptions
-We recommend writing unit tests for your functions. You do this by thinking about typical things that might be a problem, based on your knowledge of what you're testing.
+Use Property-Based Tests to Validate Your Assumptions \
+We recommend writing unit tests for your functions. You do this by thinking about typical things that might be a problem, based on your knowledge of what you're testing. \
 That unit test does two things for you. First, it lets you focus in on the problem without all the additional calls being made into your code by the property-based testing framework. Second, that unit test acts as a regression test. Because property-based tests generate random values that get passed to your test, there’s no guarantee that the same values will be used the next time you run tests. Having a unit test that forces those values to be used ensures that this bug won’t slip through.
 
 ### Topic 43. Stay Safe Out There
@@ -331,7 +331,7 @@ Basic principles that you should always bear in mind:
 - Maintain Security Updates
 
 ### Topic 44. Naming Things
-We create names for applications, subsystems, modules, functions, variables—we’re constantly creating new things and bestowing names on them. And those names are very, very important, because they reveal a lot about your intent and belief.
+We create names for applications, subsystems, modules, functions, variables—we’re constantly creating new things and bestowing names on them. And those names are very, very important, because they reveal a lot about your intent and belief. \
 When naming things, you’re constantly looking for ways of clarifying what you mean, and that act of clarification will lead you to a better understanding of your code as you write it.
 
 ## Chapter 8: Before the Project
