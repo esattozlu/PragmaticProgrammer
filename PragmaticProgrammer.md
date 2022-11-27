@@ -337,12 +337,54 @@ When naming things, you’re constantly looking for ways of clarifying what you 
 
 ## Chapter 8: Before the Project
 ### Topic 45. The Requirements Pit
+At the very beginning of a project, you and the team need to learn the requirements.
+Our job is to help people understand what they want. Programmers help people understand what they want.
+When given something that seems simple, we annoy people by looking for edge cases and asking about them.
+Requirements are learned in a feedback loop. 
+Work with a user to think like a user.
+Create and maintain a project glossary—one place that defines all the specific terms and vocabulary used in a project. All participants in the project, from end users to support staff, should use the glossary to ensure consistency. 
+Requirement documents describe what a small portion of the application should do from the perspective of a user of that functionality. When written this way, the requirements can be placed on a board and moved around to show both status and priority.
+
 ### Topic 46. Solving Impossible Puzzles 
+The key to solving puzzles is both to recognize the constraints placed on you and to recognize the degrees of freedom you do have, for in those you’ll find your solution.
+Sometimes you will find yourself working on a problem that seems much harder than you thought it should be. Your conscious brain is aware of the problem, but your conscious brain is really pretty dumb. In such cases, the answer is revealed when you return to work after doing different activities to distract your mind.
+
 ### Topic 47. Working Together
+With Pair programming, it is very effective for problem solving while one person writes code, while others ask questions, interpret and discuss. You’re less inclined to take a potentially embarrassing shortcut when someone is actively watching, which also results in higher-quality software.
+
 ### Topic 48. The Essence of Agility
+Values of agile manifesto:
+- Individuals and interactions over processes and tools 
+- Working software over comprehensive documentation 
+- Customer collaboration over contract negotiation 
+- Responding to change over following a plan
+Agility is all about responding to change, responding to the unknowns you encounter after you set out.
+Recipe for working in an agile way:
+- Work out where you are.
+- Make the smallest meaningful step towards where you want to be.
+- Evaluate where you end up, and fix anything you broke.
+
 ## Chapter 9: Pragmatic Projects 
 ### Topic 49. Pragmatic Teams
+- A team mostly stable entity of its own. A pragmatic team is small, under 10-12 or so members.
+- The team should have a quality concern and all members should embrace this concern. At the same time, all team members should be aware of the changes made and control of the project should be maintained by everyone.
+- A good team is one whose members communicate well.
+- Automation is an essential component of every project team. Make sure the team has skills at tool building to construct and deploy the tools that automate the project development and production deployment.
+
 ### Topic 50. Coconuts Don’t Cut It 
+- Do What Works, Not What’s Fashionable
+- Don't use scrum just because everyone is using scrum. If it works for you, use it.
+- Take the best pieces from any particular methodology and adapt them for use. No one size fits all, and current methods are far from complete, so you’ll need to look at more than just one popular method.
+- The goal is to be in a position to deliver working software that gives the users some new capability at a moment’s notice.
+- Deliver when the users need it, when it makes business sense to do so.
+
 ### Topic 51. Pragmatic Starter Kit 
+Pragmatic Starter Kit:
+- Version Control : Use Version Control to Drive Builds, Tests, and Releases
+- Regression Testing : Test Early, Test Often, Test Automatically
+- Full Automation : Don’t Use Manual Procedures
 ### Topic 52. Delight Your Users
+Our goal as developers is to delight users. Your users are not particularly motivated by code. Instead, they have a business problem that needs solving within the context of their objectives and budget. Their expectations are not software related. If you want to delight your client, forge a relationship with them where you can actively help solve their problems.
 ### Topic 53. Pride and Prejudice
+Pragmatic Programmers don’t shirk from responsibility. Instead, we rejoice in accepting challenges and in making our expertise well known.
+We want to see pride of ownership. “I wrote this, and I stand behind my work.” Your signature should come to be recognized as an indicator of quality. People should see your name on a piece of code and expect it to be solid, well written, tested, and documented. A really professional job. Written by a professional.
